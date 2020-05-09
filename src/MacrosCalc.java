@@ -15,7 +15,6 @@ public class MacrosCalc {
 		System.out.println("Enter Age");
 		int age = scan.nextInt();
 		
-		
 		System.out.println("Enter LifeStyle Multiplier "
 				+ "\nSedentary + Training 3-6x/wk (1.2 - 1.5)"
 				+ "\nLight Active + Training 3-6x/wk (1.5 - 1.8)"
@@ -33,7 +32,7 @@ public class MacrosCalc {
 		
 		
 		
-		float BMR = (float) ((10 * weight) + (6.25 * height) - (5 *25) + 5);
+		float BMR = (float) ((10 * weight) + (6.25 * height) - (5 * age) + 5);
 		float maintenance = BMR * lifeStyleMultiplier;
 		float weightToPounds = (float) (weight / 0.453592);
 		float leanBodyMass = (weightToPounds-(weightToPounds * bodyFatPercentage));
