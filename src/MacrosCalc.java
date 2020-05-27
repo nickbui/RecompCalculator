@@ -8,7 +8,7 @@ public class MacrosCalc {
 	
 		Scanner scan = new Scanner(System.in);
 		
-		// Initial input 
+		// Initial input for BMI
 		System.out.println("Enter Weight in kg");
 		float weight = scan.nextFloat();
 		
@@ -18,6 +18,7 @@ public class MacrosCalc {
 		System.out.println("Enter Age");
 		int age = scan.nextInt();
 		
+		//Lifestyle Multiplier for Maintenance Calories
 		System.out.println("Enter LifeStyle Multiplier "
 				+ "\nSedentary + Training 3-6x/wk (1.2 - 1.5)"
 				+ "\nLight Active + Training 3-6x/wk (1.5 - 1.8)"
@@ -29,9 +30,11 @@ public class MacrosCalc {
 			lifeStyleMultiplier = scan.nextFloat();
 		}
 		
+		// Prompt for Calculating Body Fat Percentage
 		System.out.println("Enter your Body Fat Percentage: ");
 		float bodyFatPercentage = scan.nextFloat() / 100;
 		
+		// Calculations for BMR/ Maintenance Calories/ and Lean Body Mass
 		float BMR = (float) ((10 * weight) + (6.25 * height) - (5 * age) + 5);
 		float maintenance = BMR * lifeStyleMultiplier;
 		float weightToPounds = (float) (weight / 0.453592);
